@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace QuickMartTraders
 {
     // Entity class representing a sales transaction
