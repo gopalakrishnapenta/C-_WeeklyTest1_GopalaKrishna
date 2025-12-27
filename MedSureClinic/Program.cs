@@ -1,6 +1,5 @@
 ﻿using MedSureClinic;
 using System;
-
 namespace MediSureClinic
 {
     /// <summary>
