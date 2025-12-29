@@ -1,4 +1,4 @@
-﻿using MediSureClinic;
+using MediSureClinic;
 using System;
 namespace MediSureClinic
 {
@@ -105,10 +105,19 @@ namespace MediSureClinic
         /// <summary>
         /// Gets the consultation fee entered by the user.
         /// </summary>
+        /// <summary>
+        /// Gets the consultation fee entered by the user.
+        /// </summary>
         private decimal GetConsultationFee()
         {
-            return GetPositiveAmount("Enter Consultation Fee: ");
+            Console.Write("Enter Consultation Fee: ");
+
+            if (!decimal.TryParse(Console.ReadLine(), out decimal value) || value <= 0)
+                throw new Exception("Consultation fee must be greater than zero.");
+
+            return value;
         }
+
 
         /// <summary>
         /// Gets a charge amount that must be zero or greater.
@@ -124,18 +133,6 @@ namespace MediSureClinic
             return value;
         }
 
-        /// <summary>
-        /// Reads a positive monetary amount from the user.
-        /// </summary>
-        private decimal GetPositiveAmount(string prompt)
-        {
-            Console.Write(prompt);
-
-            if (!decimal.TryParse(Console.ReadLine(), out decimal value) || value <= 0)
-                throw new Exception("Amount must be greater than zero.");
-
-            return value;
-        }
 
         /// <summary>
         /// Prints calculated billing amounts in a formatted manner.
