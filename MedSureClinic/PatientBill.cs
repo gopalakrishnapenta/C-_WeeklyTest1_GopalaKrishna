@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MedSureClinic
+namespace MediSureClinic
 {
     /// <summary>
     /// Represents a patient's billing details in the MedSure Clinic system.
