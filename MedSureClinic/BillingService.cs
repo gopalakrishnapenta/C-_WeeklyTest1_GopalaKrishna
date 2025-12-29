@@ -1,4 +1,4 @@
-﻿using MedSureClinic;
+﻿using MediSureClinic;
 using System;
 namespace MediSureClinic
 {
